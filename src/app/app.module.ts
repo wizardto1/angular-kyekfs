@@ -6,14 +6,17 @@ import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { Survey1Component } from './survey1/survey1.component';
+import { Survey2Component } from './survey2/survey2.component';
+import { Survey3Component } from './survey3/survey3.component';
+import { ResultsComponent } from './results/results.component';
 
 const appRoutes: Routes = [
-  { path: '', redirectTo : '/home', pathMatch:'full' },{path:'home', component: HomeComponent },{path:'survey1',component:Survey1Component}
+  { path: '', redirectTo : '/home', pathMatch:'full' },{path:'home', component: HomeComponent },{path:'survey1',component:Survey1Component},{path:'survey2',component:Survey2Component},{path:'survey3',component:Survey3Component},{path:'results',component:ResultsComponent}
 ];
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule,  RouterModule.forRoot(appRoutes) ],
-  declarations: [ AppComponent,  HomeComponent, Survey1Component ],
+  declarations: [ AppComponent,  HomeComponent, Survey1Component, Survey2Component, Survey3Component, ResultsComponent ],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }

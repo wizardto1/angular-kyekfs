@@ -1,7 +1,30 @@
-
-<p>
-  Start editing to see some magic happen :)
-</p>
-<a  [routerLink]="['/]survey1']">
-      Click
-    </a>
+<router-outlet></router-outlet>
+<nav role="navigation">
+  <div id="menuToggle">
+    <!--
+    A fake / hidden checkbox is used as click reciever,
+    so you can use the :checked selector on it.
+    -->
+    <input type="checkbox" />
+    
+    <!--
+    Some spans to act as a hamburger.
+    
+    They are acting like a real hamburger,
+    not that McDonalds stuff.
+    -->
+    <span></span>
+    <span></span>
+    <span></span>
+    
+    <!--
+    Too bad the menu has to be inside of the button
+    but hey, it's pure CSS magic.
+    -->
+    <ul id="menu">
+      <a [routerLink]="['/home']"><li>Home</li></a>
+      <a [routerLink]="['/survey1']"><li>Part 1</li></a>
+      <a [routerLink]="['/survey2']"><li>Part 2</li></a>
+      <a [routerLink]="['/survey3']"><li>Part 3</li></a>
+    </ul>
+  </div>
