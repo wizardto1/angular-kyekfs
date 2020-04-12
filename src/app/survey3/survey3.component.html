@@ -1,6 +1,12 @@
 <p>
-survey3 works!
+Do you think your home is safe?
 </p>
+<form>
+  <input type="radio" id="male" name="gender" value="male">
+  <label for="male">Yes</label><br>
+  <input type="radio" id="female" name="gender" value="female">
+  <label for="female">No</label><br>
+</form> 
 <button [routerLink]="['/results']">
       Click
     </button>
