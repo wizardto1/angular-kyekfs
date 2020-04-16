@@ -8,9 +8,18 @@ import { FormBuilder } from '@angular/forms';
 })
 export class Survey1Component implements OnInit {
 
-  constructor() { }
+  constructor(public first: string,
+    public last: string,) { }
 
   ngOnInit() {
   }
+
+}
+export class Name {
+
+  constructor(
+    public first: string,
+    public last: string,
+  ) {  }
 
 }
