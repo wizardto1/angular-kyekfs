@@ -10,15 +10,17 @@ import { Survey2Component } from './survey2/survey2.component';
 import { Survey3Component } from './survey3/survey3.component';
 import { ResultsComponent } from './results/results.component';
 import { Survey4Component } from './survey4/survey4.component';
+import { DataService } from './data.service';
 
 const appRoutes: Routes = [
-  { path: '', redirectTo : '/home', pathMatch:'full' },{path:'home', component: HomeComponent },{path:'survey1',component:Survey1Component},{path:'survey2',component:Survey2Component},{path:'survey3',component:Survey3Component},{path:'survey4',component:Survey4Component},{path:'results',component:ResultsComponent}
+  { path: '', redirectTo : '/home', pathMatch:'full' },{path:'home', component: HomeComponent },{path:'survey1',component:Survey1Component, pathMatch:'full'},{path:'survey2',component:Survey2Component},{path:'survey3',component:Survey3Component},{path:'survey4',component:Survey4Component},{path:'results',component:ResultsComponent}
 ];
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule,  RouterModule.forRoot(appRoutes) ],
   declarations: [ AppComponent,  HomeComponent, Survey1Component, Survey2Component, Survey3Component, ResultsComponent, Survey4Component ],
-  bootstrap:    [ AppComponent ]
+  bootstrap:    [ AppComponent ],
+  providers: [DataService]
 })
 export class AppModule { }
 export class AppRoutingModule { }

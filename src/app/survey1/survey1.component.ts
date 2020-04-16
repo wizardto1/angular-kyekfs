@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
+import { DataService } from './data.service';
 
 @Component({
   selector: 'app-survey1',
@@ -8,8 +9,7 @@ import { FormBuilder } from '@angular/forms';
 })
 export class Survey1Component implements OnInit {
 
-  constructor(public first: string,
-    public last: string,) { }
+  constructor() { }
 
   ngOnInit() {
   }
